@@ -3,6 +3,12 @@
   "version": "0.0.1",
   "description": "React component library powered by TailwindCss",
   "main": "dist/index.js",
+  "files": [
+    "lib",
+    "dist",
+    "config.js",
+    "README.md"
+  ],
   "repository": "https://github.com/sumgwork/react-tailwind-component-library.git",
   "keywords": [
     "react",
@@ -18,6 +24,7 @@
     "access": "public"
   },
   "scripts": {
+    "build:ts": "tsc --declaration --declarationMap --emitDeclarationOnly",
     "cz": "git-cz"
   },
   "devDependencies": {
