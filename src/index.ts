@@ -1,3 +1,1 @@
-export const printMessage = () => {
-  console.log("Hello World!");
-};
+export { default as NewComponent } from "./NewComponent";
