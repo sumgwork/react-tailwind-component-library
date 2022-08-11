@@ -1,0 +1,20 @@
+{
+  "name": "react-tailwind-component-library",
+  "version": "0.0.1",
+  "description": "React component library powered by TailwindCss",
+  "main": "dist/index.js",
+  "repository": "https://github.com/sumgwork/react-tailwind-component-library.git",
+  "keywords": [
+    "react",
+    "tailwindcss",
+    "componentlibrary",
+    "react-tailwind-component-library",
+    "designsystem"
+  ],
+  "author": "Sumit Govil <sumg.work@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}
