@@ -124,46 +124,39 @@ const Text: React.FC<TextProps> = ({
 
   // hero allows only 4 sizes
   if (variant === 'hero') {
-    // variantStyle = TEXT.variant.hero.base;
-    // weightStyle = text.weight[weight!];
+    variantStyle = TEXT.variant.hero.base;
+    weightStyle = TEXT.weight[weight!];
     // restrict max size to 4 for hero. For anything bigger, keep it at 4
-    // sizeStyle = text.variant.hero[!size || size > 4 ? 4 : size];
+    sizeStyle = !size || size > 4 ? TEXT.variant.hero[4] : TEXT.variant.hero[size];
   }
 
   // for display
   else if (variant === 'display') {
-    // variantStyle = text.variant.display.base;
-    // sizeStyle = text.variant.display[size!];
-    // weightStyle = text.weight[weight!];
+    variantStyle = TEXT.variant.display.base;
+    sizeStyle = TEXT.variant.display[size!];
+    weightStyle = TEXT.weight[weight!];
   }
 
   // for heading, accept all weights and sizes
   else if (variant === 'heading') {
-    // variantStyle = text.variant.heading.base;
-    // sizeStyle = text.variant.heading[size!];
-    // weightStyle = text.weight[weight!];
+    variantStyle = TEXT.variant.heading.base;
+    sizeStyle = TEXT.variant.heading[size!];
+    weightStyle = TEXT.weight[weight!];
   }
 
   // everything else will fall in body variant, where only size 1-4 are accepted
   else {
-    // variantStyle = text.variant.body.base;
+    variantStyle = TEXT.variant.body.base;
     // restrict max size to 4 for body. For anything bigger, keep it at 4
-    // sizeStyle = text.variant.body[!size || size > 4 ? 4 : size];
-    // weightStyle = text.weight[weight!];
+    sizeStyle = TEXT.variant.body[!size || size > 4 ? 4 : size];
+    weightStyle = TEXT.weight[weight!];
   }
 
-  //   const italicStyle = italic ? text.italic : '';
+  const italicStyle = italic ? TEXT.italic : '';
 
-  //   const linkStyle = link || clickable ? text.link : '';
+  const linkStyle = link || clickable ? TEXT.link : '';
 
-  const cls = classnames(
-    baseStyle,
-    variantStyle,
-    weightStyle,
-    sizeStyle,
-    // italicStyle, linkStyle,
-    className
-  );
+  const cls = classnames(baseStyle, variantStyle, weightStyle, sizeStyle, italicStyle, linkStyle, className);
 
   const Tag = tag! as keyof JSX.IntrinsicElements;
 
