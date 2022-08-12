@@ -33,7 +33,7 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "commit-check": "npm run lint && npm run prettier",
-    "prepare": "husky install"
+    "changelog": "cz ch"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
