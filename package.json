@@ -32,9 +32,12 @@
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "commit-check": "npm run lint && npm run prettier"
+    "commit-check": "npm run lint && npm run prettier",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^5.24.0",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
@@ -50,7 +53,7 @@
     "eslint-plugin-storybook": "^0.5.12",
     "eslint-plugin-testing-library": "^5.6.0",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "ts-loader": "^9.3.1",
@@ -67,12 +70,6 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true",
-      "pre-commit": "npm run commit-check"
     }
   },
   "dependencies": {
