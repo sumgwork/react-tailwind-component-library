@@ -17,6 +17,7 @@ module.exports = {
     'prettier',
     'unused-imports',
     '@typescript-eslint',
+    'eslint-plugin-storybook',
     // 'testing-library'
   ],
   rules: {
