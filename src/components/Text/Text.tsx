@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { ThemeContext } from '../../context/ThemeContext';
-// import Icon from '../Icon/Icon';
+import Icon from '../Icon/Icon';
 
 export const VALID_TAGS = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'span', 'div'] as const;
 export const TEXT_VARIANTS = ['hero', 'display', 'heading', 'body'] as const;
@@ -169,7 +169,7 @@ const Text: React.FC<TextProps> = ({
     return (
       <a className={cls} role="link" href={href} target={external ? '_blank' : '_self'} {...rest}>
         {children}
-        {/* {external && !hideExternalLinkIcon && <Icon name="ExternalLink" className={linkStyle} />} */}
+        {external && !hideExternalLinkIcon && <Icon name="ExternalLink" className={linkStyle} />}
       </a>
     );
   }

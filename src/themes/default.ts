@@ -62,4 +62,18 @@ export default {
     link: 'text-focused hover:text-hover cursor-pointer underline underline-offset-4 inline-flex items-center',
     button: 'text-focused hover:text-hover cursor-pointer underline underline-offset-4 flex items-center',
   },
+
+  // Icon
+  ['ICON']: {
+    variant: {
+      inherit: '',
+      default: 'text-gray-800',
+      white: 'text-gray-0',
+      brand: 'text-primary-base',
+      highlight: 'text-highlight-base',
+      success: 'text-success-dark',
+      error: 'text-danger-dark',
+      info: 'text-info-dark',
+    },
+  },
 };

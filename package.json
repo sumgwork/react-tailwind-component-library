@@ -24,7 +24,8 @@
     "access": "public"
   },
   "scripts": {
-    "prebuild": "rimraf dist lib && npm run build:ts && npm run build:tailwind && npm run build:lib",
+    "prebuild": "rimraf dist lib && npm run build:icons && npm run build:ts && npm run build:tailwind && npm run build:lib",
+    "build:icons": "rimraf src/icons && svgr --icon --title-prop --typescript --ref --replace-attr-values '#CB9237=currentColor' -d src/icons src/svg",
     "build:tailwind": "tailwindcss build style/tailwind.css -o style/output.css -c style/tailwind.config.js",
     "build:tailwind:watch": "tailwindcss build style/tailwind.css -o style/output.css -c style/tailwind.config.js --watch",
     "build:lib": "tsc src/themes/default.ts --target esnext --outfile lib/defaultTheme.js --module amd --moduleResolution node",
@@ -37,7 +38,7 @@
     "prettier:fix": "prettier --write .",
     "commit-check": "npm run lint && npm run prettier",
     "changelog": "cz ch",
-    "prestorybook": "npm run build:tailwind",
+    "prestorybook": "npm run build:tailwind && npm run build:icons",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "dev": "npm-run-all -p storybook build:tailwind:watch"
@@ -55,6 +56,7 @@
     "@storybook/manager-webpack5": "^6.5.10",
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
+    "@svgr/cli": "^6.3.1",
     "@svgr/webpack": "^6.3.1",
     "@typescript-eslint/eslint-plugin": "^5.24.0",
     "babel-loader": "^8.2.5",
