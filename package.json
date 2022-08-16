@@ -1,6 +1,6 @@
 {
   "name": "react-tailwind-component-library",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "React component library powered by TailwindCss",
   "main": "dist/index.js",
   "files": [
