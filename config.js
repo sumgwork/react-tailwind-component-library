@@ -7,35 +7,35 @@ const colors = {
   black: '#000000',
 
   primary: {
-    base: '#161f3f',
-    light: '#47588b',
-    dark: '#04071e',
-    fade: '#d5dff5',
+    base: '#45062e',
+    light: '#5E083E',
+    dark: '#380525',
+    fade: '#710A4B',
   },
 
   highlight: {
-    base: '#edb54c',
-    light: '#f4cd77',
-    dark: '#cb9237',
-    fade: '#fef7db',
+    base: '#f7ee6f',
+    light: '#F9F39F',
+    dark: '#605A06',
+    fade: '#FAF5B2',
   },
 
   success: {
-    base: '#84ed6f',
-    fade: '#dcfdc7',
-    dark: '#39aa37',
+    base: '#04724D',
+    fade: '#069D6B',
+    dark: '#034F35',
   },
 
   info: {
-    base: '#2b6aff',
-    fade: '#d4e6ff',
-    dark: '#153bb7',
+    base: '#87A1C0',
+    fade: '#AFC0D5',
+    dark: '#5F81AB',
   },
 
   danger: {
-    base: '#ff6247',
-    fade: '#ffebda',
-    dark: '#db3f33',
+    base: '#D94D08',
+    fade: '#F99462',
+    dark: '#9D3806',
   },
 
   warning: {
@@ -57,8 +57,8 @@ const colors = {
     1000: '#000000',
   },
 
-  focused: '#0075bc',
-  hover: '#00568a',
+  focused: '#736CDA',
+  hover: '#736CDA',
 };
 
 const fontFamily = {
