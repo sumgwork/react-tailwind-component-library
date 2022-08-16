@@ -76,4 +76,15 @@ export default {
       info: 'text-info-dark',
     },
   },
+
+  // Image
+  ['IMAGE']: {
+    base: 'max-w-full h-auto object-cover',
+    rounded: {
+      default: 'rounded',
+      large: 'rounded-lg',
+      full: 'rounded-full',
+      none: 'rounded-none',
+    },
+  },
 };
