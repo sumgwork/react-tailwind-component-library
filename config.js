@@ -62,8 +62,8 @@ const colors = {
 };
 
 const fontFamily = {
-  generic: ['sans-serif'],
-  brand: ['serif'],
+  generic: ['Roboto', 'sans-serif'],
+  brand: ['Asap', 'sans-serif'],
 };
 
 const backgroundOpacity = (theme) => ({
